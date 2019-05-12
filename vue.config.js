@@ -22,9 +22,6 @@ module.exports = {
     // 那么将这个值改为 `/my-app/`
     baseUrl: '/',
 
-    // 将构建好的文件输出到哪里
-    outputDir: 'dist',
-
     // 放置静态资源的地方 (js/css/img/font/...)
     // assetsDir: '',
 
@@ -39,37 +36,32 @@ module.exports = {
 
     // babel-loader 默认会跳过 node_modules 依赖。
     // 通过这个选项可以显式转译一个依赖。
-    transpileDependencies: [/* string or regex */],
+    transpileDependencies: [ /* string or regex */ ],
 
     // 是否为生产环境构建生成 source map？
     productionSourceMap: false,
 
     // 调整内部的 webpack 配置。
     // 查阅 https://github.com/vuejs/vue-docs-zh-cn/blob/master/vue-cli/webpack.md
-    chainWebpack: () => { },
-    configureWebpack: () => { },
+    chainWebpack: () => {},
+
+    configureWebpack: () => {},
 
     // CSS 相关选项
     css: {
-        // 将组件内的 CSS 提取到一个单独的 CSS 文件 (只用在生产环境中)
-        // 也可以是一个传递给 `extract-text-webpack-plugin` 的选项对象
-        extract: true,
+        sourceMap: true,
+        loaderOptions: {
+            css: {},
+            postcss: {
+                plugins: [
+                    require('postcss-px2rem')({
+                        remUnit: 54
+                    })
 
-        // 是否开启 CSS source map？
-        sourceMap: false,
-
-        // 为预处理器的 loader 传递自定义选项。比如传递给
-        // sass-loader 时，使用 `{ sass: { ... } }`。
-        loaderOptions: {},
-
-        // 为所有的 CSS 及其预处理文件开启 CSS Modules。
-        // 这个选项不会影响 `*.vue` 文件。
-        modules: false
+                ]
+            }
+        }
     },
-
-    // 在生产环境下为 Babel 和 TypeScript 使用 `thread-loader`
-    // 在多核机器下会默认开启。
-    parallel: require('os').cpus().length > 1,
 
     // PWA 插件的选项。
     // 查阅 https://github.com/vuejs/vue-docs-zh-cn/blob/master/vue-cli-plugin-pwa/README.md
@@ -95,7 +87,7 @@ module.exports = {
         open: true,
         // 查阅 https://github.com/vuejs/vue-docs-zh-cn/blob/master/vue-cli/cli-service.md#配置代理
         proxy: 'http://localhost:8080', // string | Object
-        before: app => { }
+        before: app => {}
     },
 
     configureWebpack: config => {

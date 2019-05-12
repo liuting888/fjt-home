@@ -11,11 +11,11 @@ import "./assets/iconfont/iconfont.css"
 import '@/styles/index.scss' // global css
 
 import '@/permission' // permission control
-
+import 'lib-flexible'
 // 引入echarts
-import echarts from 'echarts'
+// import echarts from 'echarts'
 
-Vue.prototype.$echarts = echarts
+// Vue.prototype.$echarts = echarts
 
 Vue.use(ElementUI);
 Vue.config.productionTip = false;
