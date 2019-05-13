@@ -1,32 +1,31 @@
 <template>
   <div class="app-container index">
     <div class="top">
-      <img
-        src="./../../images/290商务办公画板 1-100@2x.png"
-        alt=""
-      >
+      <img src="./../../images/bigbac.png" alt>
     </div>
     <div class="body">
       <div class="main-top divs">
         <div class="fl">
           <h2>辅警社区</h2>
-          <p class="user">已有<span>256629</span>人加入</p>
+          <p class="user">
+            已有
+            <span>256629</span>人加入
+          </p>
           <p class="info">打造国内最大辅警社区，为广大辅警提供一个相互交流学习的家园。齐心协力，共建和谐社会。</p>
           <p>
             <el-button type="primary">立即体验</el-button>
           </p>
         </div>
-        <div class="fr "><img
-            src="./../../images/1.png"
-            alt=""
-          ></div>
+        <div class="fr">
+          <img src="./../../images/1.png" alt>
+        </div>
       </div>
       <div class="main-center divs">
-        <div class="fl"><img
-            src="./../../images/2.png"
-            alt=""
-          ></div>
+        <div class="center-back"></div>
         <div class="fl">
+          <img src="./../../images/2.png" alt>
+        </div>
+        <div class="fl right">
           <h2>辅警通APP</h2>
           <p class="user">做你聪明的秘书，让警务协作更轻松</p>
           <p class="info">一款专门为辅警工作而设计的高效率APP</p>
@@ -35,14 +34,23 @@
           </p>
         </div>
       </div>
-      <div>
-        <img
-          src="./../../images/yuan1.png"
-          alt=""
-        >
-        <!-- <div class="yuan">
-          <div ></div>
-        </div> -->
+      <div class="total">
+        <div class="yuan">
+          <div>4,933</div>
+          <p>日均访问量（次数）</p>
+        </div>
+        <div class="yuan">
+          <div>1,707</div>
+          <p>日均在线人数</p>
+        </div>
+        <div class="yuan">
+          <div>1,589,439</div>
+          <p>访问总量（次）</p>
+        </div>
+        <div class="yuan">
+          <div>6,812,661</div>
+          <p>总数据量（条）</p>
+        </div>
       </div>
       <div class="main-bottom divs">
         <div class="fl">
@@ -54,28 +62,20 @@
             <el-button type="primary">了解更多</el-button>
           </p>
         </div>
-        <div class="fr"><img
-            src="./../../images/3.png"
-            alt=""
-          ></div>
+        <div class="fr">
+          <img src="./../../images/3.png" alt>
+        </div>
       </div>
     </div>
     <div class="footer">
       <div class="footer-top">
         <div class="fl footer-left">
-          <div class="fl">
+          <div class="fl footer-left-right">
             <div class="top">
-              <img
-                src="./../../images/Phootoshop_Logo@2x.png"
-                alt=""
-              >
+              <img src="./../../images/Phootoshop_Logo@2x.png" alt>
             </div>
-            <div class="center">
-              辅警通
-            </div>
-            <div class="bottom">
-              让警务协作更轻松
-            </div>
+            <div class="center">辅警通</div>
+            <div class="bottom">让警务协作更轻松</div>
           </div>
           <div class="fr">
             <p class="user">联系我们</p>
@@ -88,41 +88,26 @@
         <div class="fr footer-right">
           <div class="fr">
             <div class="top">
-              <img
-                src="./../../images/wx1.png"
-                alt=""
-              >
+              <img src="./../../images/wx1.png" alt>
             </div>
-            <div class="center">
-              辅警通
-            </div>
+            <div class="center">辅警通APP</div>
           </div>
           <div class="fr">
             <div class="top">
-              <img
-                src="./../../images/wx2.png"
-                alt=""
-              >
+              <img src="./../../images/wx2.png" alt>
             </div>
-            <div class="center">
-              辅警通
-            </div>
+            <div class="center">客服微信</div>
           </div>
           <div class="fr">
             <div class="top">
-              <img
-                src="./../../images/wx3.png"
-                alt=""
-              >
+              <img src="./../../images/wx3.png" alt>
             </div>
-            <div class="center">
-              辅警通
-            </div>
+            <div class="center">微信公众号</div>
           </div>
           <!-- <img
             src="./../../images/1.png"
             alt=""
-          > -->
+          >-->
         </div>
       </div>
       <div class="footer-bottom">
@@ -135,9 +120,7 @@
           <span>邵阳市公安局</span>
           <span>邵阳市公安局</span>
         </div>
-        <p>
-          Copyright © 2016 - 2026 All Rights Reserved 公信诚丰信息技术服务有限公司
-        </p>
+        <p>Copyright © 2016 - 2026 All Rights Reserved 公信诚丰信息技术服务有限公司</p>
       </div>
     </div>
   </div>
@@ -219,11 +202,27 @@ export default {
       }
     }
     .main-center {
+      position: relative;
       height: 440px;
+      margin-bottom: 40px;
+      .center-back {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 1159px;
+        height: 373px;
+        background: rgba(242, 245, 248, 1);
+      }
+      .right{
+        top:80px;
+        left: 480px;
+      }
       .fl {
+        position: absolute;
         width: 330px;
         // margin-top: 129px;
         margin-left: 213px;
+        z-index: 100;
         h2 {
           margin-top: 100px;
           font-size: 40px;
@@ -278,6 +277,11 @@ export default {
         }
         p {
           margin-top: 8px;
+          // .el-button--primary {
+          //   width: 133px;
+          //   height: 33px;
+          //   background: rgba(25, 128, 255, 1);
+          // }
         }
       }
       .fr {
@@ -288,95 +292,138 @@ export default {
       }
     }
   }
-}
-.footer {
-  height: 370px;
-  background: rgba(242, 245, 248, 1);
-  .footer-top {
-    height: 240px;
-    overflow: hidden;
-    .footer-left {
-      margin-top: 45px;
-      margin-left: 147px;
-      margin-right: 67px;
-      .top {
+  .footer {
+    height: 370px;
+    background: rgba(242, 245, 248, 1);
+    .footer-top {
+      height: 240px;
+      overflow: hidden;
+      .footer-left {
+        margin-top: 45px;
+        margin-left: 147px;
         margin-right: 67px;
-        img {
-          width: 87px;
+        .footer-left-right {
+          margin-right: 40px;
+          text-align: center;
+          .top {
+            img {
+              width: 87px;
+            }
+          }
+          .center {
+            margin-top: 4px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 33px;
+            color: rgba(0, 0, 0, 0.85);
+          }
+          .bottom {
+            margin-top: 4px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 15px;
+            color: rgba(0, 0, 0, 0.65);
+          }
+        }
+
+        .user {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 22px;
+          color: rgba(0, 0, 0, 0.85);
+        }
+        .info {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 12px;
+          color: rgba(0, 0, 0, 0.65);
+        }
+        p {
+          margin-top: 8px;
         }
       }
-      .center {
-        width: 87px;
-        margin-top: 4px;
-        text-align: center;
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 33px;
-        color: rgba(0, 0, 0, 0.85);
+      .footer-right {
+        margin-top: 45px;
+        margin-right: 94px;
+        .fr {
+          width: 177px;
+          text-align: center;
+          font-size: 16px;
+          line-height: 22px;
+          color: rgba(0, 0, 0, 0.85);
+          img {
+            width: 133px;
+          }
+        }
       }
-      .bottom {
-        width: 100px;
-        margin-top: 4px;
-        text-align: center;
-        font-size: 12px;
+    }
+    .footer-bottom {
+      height: 130px;
+      background: rgba(2, 16, 31, 1);
+      text-align: center;
+      div {
+        font-size: 13px;
         font-weight: 400;
-        line-height: 15px;
-        color: rgba(0, 0, 0, 0.65);
-      }
-      .user {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 22px;
-        color: rgba(0, 0, 0, 0.85);
-      }
-      .info {
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 12px;
-        color: rgba(0, 0, 0, 0.65);
+        line-height: 18px;
+        color: rgba(255, 255, 255, 0.9);
+        span {
+          display: inline-block;
+          margin: 40px;
+          cursor: pointer;
+        }
       }
       p {
-        margin-top: 8px;
-      }
-    }
-    .footer-right {
-      margin-top: 45px;
-      margin-right: 94px;
-      .fr {
-        width: 177px;
-        text-align: center;
-        font-size: 16px;
-        line-height: 22px;
-        color: rgba(0, 0, 0, 0.85);
-        img {
-          width: 133px;
-        }
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 13px;
+        color: rgba(255, 255, 255, 0.7);
       }
     }
   }
-  .footer-bottom {
-    height: 130px;
-    background: rgba(2, 16, 31, 1);
-    text-align: center;
-    div {
-      font-size:13px;
-      font-weight: 400;
-      line-height: 18px;
-      color: rgba(255, 255, 255, 0.9);
-      span {
+  .total {
+    display: flex;
+    flex-direction: row;
+    .yuan {
+      width: 25%;
+      text-align: center;
+      div {
         display: inline-block;
-        margin: 40px;
-        cursor: pointer;
+        width: 120px;
+        height: 112px;
+        line-height: 112px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 500;
+        color: rgba(25, 128, 255, 1);
+        background: rgba(255, 255, 255, 1);
+        border: 1px solid rgba(25, 128, 255, 1);
+        border-radius: 50%;
+        opacity: 1;
+      }
+      p {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.65);
+        color: rgba(0, 0, 0, 0.65);
+        opacity: 1;
       }
     }
-    p {
-      font-size: 12px;
-      font-weight: 400;
-      line-height: 13px;
-      color: rgba(255, 255, 255, 0.7);
+  }
+  p {
+    .el-button--primary {
+      width: 133px;
+      background: rgba(25, 128, 255, 1);
     }
   }
 }
+
 .fl {
   float: left;
 }

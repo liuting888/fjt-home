@@ -42,47 +42,7 @@ export const constantRouterMap = [
 //     }]
 // },
 // {
-//     path: '/personnel',
-//     component: Layout,
-//     redirect: '/personnel/index',
-//     name: 'personnel',
-//     meta: { title: '人员管理'},
-//     children: [{
-//         path: 'index',
-//         name: 'personnel-list',
-//         component: () =>
-//             import('@/views/personnel/index'),
-//         meta: { title: '人员管理', icon: 'icon-yonghutianchong' }
-//     }, {
-//         path: 'detail',
-//         name: 'personnel-detail',
-//         component: () =>
-//             import('@/views/personnel/detail'),
-//         meta: { title: '详情'},
-//         hidden: true
-//     }]
-// },
-// {
-//     path: '/integral',
-//     component: Layout,
-//     redirect: '/integral/index',
-//     name: 'integral',
-//     meta: { title: '积分管理'},
-//     children: [{
-//         path: 'index',
-//         name: 'integral-list',
-//         component: () =>
-//             import('@/views/integral/index'),
-//         meta: { title: '积分管理', icon: 'icon-fenleiorguangchangorqitatianchong' }
-//     }, {
-//         path: 'detail',
-//         name: 'integral-detail',
-//         component: () =>
-//             import('@/views/integral/detail'),
-//         meta: { title: '详情'},
-//         hidden: true
-//     }]
-// },
+
 // {
 //     path: '/content',
 //     component: Layout,

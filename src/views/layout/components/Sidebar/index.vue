@@ -8,7 +8,7 @@
       text-color="#fff"
       active-text-color="#409EFF"
     >
-      <img src="./../../../../images/fj-sider-bg.png" alt class="menu-img">
+      <!-- <img src="./../../../../images/fj-sider-bg.png" alt class="menu-img"> -->
       <sidebar-item v-for="route in routes" :key="route.name" :item="route" :base-path="route.path"></sidebar-item>
     </el-menu>
   </el-scrollbar>

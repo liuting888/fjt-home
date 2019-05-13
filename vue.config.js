@@ -55,7 +55,7 @@ module.exports = {
             postcss: {
                 plugins: [
                     require('postcss-px2rem')({
-                        remUnit: 54
+                        remUnit: 54 //按照1280设计稿来转换
                     })
 
                 ]
